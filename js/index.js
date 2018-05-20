@@ -351,6 +351,9 @@ let detailRender = (function () {
     }
 })();
 
+$(document).on('touchstart touchmove touchend',(ev)=>{
+   ev.preventDefault();
+});
 
 //开发过程中，由于当前项目板块过多，(每一个板块都是一个单例)，我们最好规划一个机制:通过标识的判断可以让程序员执行对应板块的内容，这样开发哪个板块，我们就把标识改为啥。(HASH路由控制)
 let url = window.location.href, //获取当前页面的URL地址 location.href='xxx' 让其跳转到哪一个页面
